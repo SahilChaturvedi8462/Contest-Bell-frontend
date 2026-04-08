@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login — Contest Bell</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Contest Bell Logo" height="48" />
+        </a>
+      </div>
+      <div class="nav-auth">
+        <a href="register.html" class="btn-primary">Register</a>
+      </div>
+    </nav>
+
+    <!-- ========== LOGIN SECTION ========== -->
+    <section id="login">
+      <div class="auth-card">
+
+        <div class="auth-header">
+          <h1>Welcome Back</h1>
+          <p>Log in to manage your contest notifications.</p>
+        </div>
+
+        <form id="login-form">
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="form-forgot">
+            <a href="forgot-password.html">Forgot password?</a>
+          </div>
+          <div class="resend-verification">
+            <p>Didn't receive verification email? 
+              <a href="#" id="resend-verification-btn">Resend it</a>
+            </p>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Log In</button>
+
+        </form>
+
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="register.html">Register</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+      <div class="footer-bottom">
+        <p>© 2026 Contest Bell. All rights reserved.</p>
+        <p>Made with ❤️ for the CP community.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

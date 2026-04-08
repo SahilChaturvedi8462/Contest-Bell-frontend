@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscriptions — Contest Bell</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="Contest Bell Logo" height="48" />
+        </a>
+      </div>
+      <div class="nav-auth">
+        <a href="dashboard.html" class="btn-secondary">Dashboard</a>
+        <a href="#" id="logout-btn" class="btn-primary">Log Out</a>
+      </div>
+    </nav>
+
+    <!-- ========== SUBSCRIPTION SECTION ========== -->
+    <section id="subscriptions">
+
+      <div class="section-header">
+        <h1>Manage Subscriptions</h1>
+        <p>Choose platforms and divisions you want to be notified about.</p>
+      </div>
+
+      <div class="platforms-grid">
+
+        <!-- ===== CODEFORCES ===== -->
+        <div class="platform-card" id="card-CODEFORCES">
+          <div class="platform-card-header">
+            <img src="assets/images/platforms/codeforces.png" alt="Codeforces" />
+            <h3>Codeforces</h3>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-CODEFORCES" data-platform="CODEFORCES" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="divisions" id="divisions-CODEFORCES" hidden>
+            <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
+            <label><input type="checkbox" value="DIV_1" data-platform="CODEFORCES" /> Div. 1</label>
+            <label><input type="checkbox" value="DIV_2" data-platform="CODEFORCES" /> Div. 2</label>
+            <label><input type="checkbox" value="DIV_1_2" data-platform="CODEFORCES" /> Div. 1 + 2</label>
+            <label><input type="checkbox" value="DIV_3" data-platform="CODEFORCES" /> Div. 3</label>
+            <label><input type="checkbox" value="DIV_4" data-platform="CODEFORCES" /> Div. 4</label>
+            <label><input type="checkbox" value="EDUCATIONAL" data-platform="CODEFORCES" /> Educational</label>
+            <label><input type="checkbox" value="GLOBAL" data-platform="CODEFORCES" /> Global</label>
+          </div>
+        </div>
+
+        <!-- ===== LEETCODE ===== -->
+        <div class="platform-card" id="card-LEETCODE">
+          <div class="platform-card-header">
+            <img src="assets/images/platforms/leetcode.png" alt="LeetCode" />
+            <h3>LeetCode</h3>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-LEETCODE" data-platform="LEETCODE" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="divisions" id="divisions-LEETCODE" hidden>
+            <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
+            <label><input type="checkbox" value="WEEKLY" data-platform="LEETCODE" /> Weekly Contest</label>
+            <label><input type="checkbox" value="BIWEEKLY" data-platform="LEETCODE" /> Biweekly Contest</label>
+          </div>
+        </div>
+
+        <!-- ===== CODECHEF ===== -->
+        <div class="platform-card" id="card-CODECHEF">
+          <div class="platform-card-header">
+            <img src="assets/images/platforms/codechef.png" alt="CodeChef" />
+            <h3>CodeChef</h3>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-CODECHEF" data-platform="CODECHEF" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="divisions" id="divisions-CODECHEF" hidden>
+            <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
+            <label><input type="checkbox" value="STARTERS" data-platform="CODECHEF" /> Starters</label>
+            <label><input type="checkbox" value="COOK_OFF" data-platform="CODECHEF" /> Cook-Off</label>
+            <label><input type="checkbox" value="LUNCHTIME" data-platform="CODECHEF" /> Lunchtime</label>
+            <label><input type="checkbox" value="LONG_CHALLENGE" data-platform="CODECHEF" /> Long Challenge</label>
+          </div>
+        </div>
+
+        <!-- ===== ATCODER ===== -->
+        <div class="platform-card" id="card-ATCODER">
+          <div class="platform-card-header">
+            <img src="assets/images/platforms/atcoder.png" alt="AtCoder" />
+            <h3>AtCoder</h3>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-ATCODER" data-platform="ATCODER" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="divisions" id="divisions-ATCODER" hidden>
+            <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
+            <label><input type="checkbox" value="BEGINNER" data-platform="ATCODER" /> ABC — Beginner</label>
+            <label><input type="checkbox" value="REGULAR" data-platform="ATCODER" /> ARC — Regular</label>
+            <label><input type="checkbox" value="GRAND" data-platform="ATCODER" /> AGC — Grand</label>
+            <label><input type="checkbox" value="HEURISTIC" data-platform="ATCODER" /> AHC — Heuristic</label>
+          </div>
+        </div>
+
+        <!-- ===== HACKERRANK ===== -->
+        <div class="platform-card" id="card-HACKERRANK">
+          <div class="platform-card-header">
+            <img src="assets/images/platforms/hackerrank.png" alt="HackerRank" />
+            <h3>HackerRank</h3>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-HACKERRANK" data-platform="HACKERRANK" />
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+
+          <div class="divisions" id="divisions-HACKERRANK" hidden>
+            <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
+            <label><input type="checkbox" value="WEEKLY" data-platform="HACKERRANK" /> Weekly Challenges</label>
+            <label><input type="checkbox" value="OTHER" data-platform="HACKERRANK" /> Other Contests</label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Save button -->
+      <div class="save-row">
+        <button id="save-btn" class="btn-primary btn-large">Save Subscriptions</button>
+        <p id="save-success" hidden>✅ Subscriptions saved successfully!</p>
+        <p id="save-error" hidden>❌ Something went wrong. Please try again.</p>
+      </div>
+
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+      <div class="footer-bottom">
+        <p>© 2026 Contest Bell. All rights reserved.</p>
+        <p>Made with ❤️ for the CP community.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
