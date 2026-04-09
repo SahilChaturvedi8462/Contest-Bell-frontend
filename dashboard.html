@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard — Contest Bell</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Contest Bell</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
 
-    <!-- ========== NAVBAR ========== -->
-    <nav>
-      <div class="nav-logo">
-        <a href="index.html">
-          <img src="assets/images/logo.png" alt="Contest Bell Logo" height="48" />
-        </a>
-      </div>
-      <div class="nav-auth">
-        <a href="profile.html" class="btn-secondary">My Profile</a>
-        <a href="subscription.html" class="btn-secondary">Subscriptions</a>
-        <a href="#" id="logout-btn" class="btn-primary">Log Out</a>
-      </div>
-    </nav>
+<body>
+  <!-- ===== LOADER ===== -->
+  <div id="loader-overlay">
+    <div class="loader-bell">🔔</div>
+    <div class="loader-brackets">
+      <span>&lt;</span>
+      <span>/</span>
+      <span>&gt;</span>
+    </div>
+    <p class="loader-text">LOADING...</p>
+  </div>
 
-    <!-- ========== DASHBOARD SECTION ========== -->
-    <section id="dashboard">
+  <!-- ========== NAVBAR ========== -->
+  <nav>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Contest Bell Logo" height="48" />
+      </a>
+    </div>
+    <div class="nav-auth">
+      <a href="profile.html" class="btn-secondary">My Profile</a>
+      <a href="subscription.html" class="btn-secondary">Subscriptions</a>
+      <a href="#" id="logout-btn" class="btn-primary">Log Out</a>
+    </div>
+  </nav>
 
-      <div class="section-header">
-        <h1>Upcoming Contests</h1>
-        <p>All upcoming contests sorted by start time. Times shown in your local timezone.</p>
-      </div>
+  <!-- ========== DASHBOARD SECTION ========== -->
+  <section id="dashboard">
 
-      <!-- FILTER BAR -->
-      <div class="filter-bar">
-        <button class="filter-btn active" data-filter="ALL">All</button>
-        <button class="filter-btn" data-filter="CODEFORCES">Codeforces</button>
-        <button class="filter-btn" data-filter="LEETCODE">LeetCode</button>
-        <button class="filter-btn" data-filter="CODECHEF">CodeChef</button>
-        <button class="filter-btn" data-filter="ATCODER">AtCoder</button>
-        <button class="filter-btn" data-filter="HACKERRANK">HackerRank</button>
-      </div>
+    <div class="section-header">
+      <h1>Upcoming Contests</h1>
+      <p>All upcoming contests sorted by start time. Times shown in your local timezone.</p>
+    </div>
 
-      <!-- LOADING STATE — shown while JS fetches data -->
-      <div id="loading-state">
-        <p>⏳ Loading contests...</p>
-      </div>
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="ALL">All</button>
+      <button class="filter-btn" data-filter="CODEFORCES">Codeforces</button>
+      <button class="filter-btn" data-filter="LEETCODE">LeetCode</button>
+      <button class="filter-btn" data-filter="CODECHEF">CodeChef</button>
+      <button class="filter-btn" data-filter="ATCODER">AtCoder</button>
+      <button class="filter-btn" data-filter="HACKERRANK">HackerRank</button>
+    </div>
 
-      <!-- ERROR STATE — shown if API call fails -->
-      <div id="error-state" hidden>
-        <p>❌ Failed to load contests. Please try again.</p>
-        <button id="retry-btn" class="btn-secondary">Retry</button>
-      </div>
+    <!-- LOADING STATE — shown while JS fetches data -->
+    <div id="loading-state">
+      <p>⏳ Loading contests...</p>
+    </div>
 
-      <!-- EMPTY STATE — shown if no contests returned -->
-      <div id="empty-state" hidden>
-        <p>🎉 No upcoming contests right now. Check back later!</p>
-        <a href="subscription.html" class="btn-secondary">Manage Subscriptions</a>
-      </div>
+    <!-- ERROR STATE — shown if API call fails -->
+    <div id="error-state" hidden>
+      <p>❌ Failed to load contests. Please try again.</p>
+      <button id="retry-btn" class="btn-secondary">Retry</button>
+    </div>
 
-      <!-- CONTEST LIST — JS will populate this -->
-      <div id="contest-list" hidden>
-        <!--
+    <!-- EMPTY STATE — shown if no contests returned -->
+    <div id="empty-state" hidden>
+      <p>🎉 No upcoming contests right now. Check back later!</p>
+      <a href="subscription.html" class="btn-secondary">Manage Subscriptions</a>
+    </div>
+
+    <!-- CONTEST LIST — JS will populate this -->
+    <div id="contest-list" hidden>
+      <!--
           JS will generate and inject cards like this for each contest:
 
           <div class="contest-card" data-platform="CODEFORCES">
@@ -80,17 +92,18 @@
             </div>
           </div>
         -->
-      </div>
+    </div>
 
-    </section>
+  </section>
 
-    <!-- ========== FOOTER ========== -->
-    <footer>
-      <div class="footer-bottom">
-        <p>© 2026 Contest Bell. All rights reserved.</p>
-        <p>Made with ❤️ for the CP community.</p>
-      </div>
-    </footer>
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="footer-bottom">
+      <p>© 2026 Contest Bell. All rights reserved.</p>
+      <p>Made with ❤️ for the CP community.</p>
+    </div>
+  </footer>
 
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,182 @@
+/* ===== DASHBOARD SECTION ===== */
+#dashboard {
+    padding: 4rem 6%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ===== FILTER BAR ===== */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  
+  .filter-btn {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-btn:hover {
+    border-color: var(--yellow-primary);
+    color: var(--yellow-primary);
+  }
+  
+  .filter-btn.active {
+    background-color: var(--yellow-primary);
+    border-color: var(--yellow-primary);
+    color: #000000;
+  }
+  
+  /* ===== STATES ===== */
+  #loading-state,
+  #error-state,
+  #empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 5rem 2rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+  
+  #error-state p,
+  #empty-state p {
+    font-size: 1.1rem;
+  }
+  
+  /* ===== CONTEST LIST ===== */
+  #contest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* ===== CONTEST CARD ===== */
+  .contest-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.75rem;
+    transition: border-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .contest-card:hover {
+    border-color: var(--yellow-primary);
+    transform: translateX(4px);
+    box-shadow: var(--glow);
+  }
+  
+  /* ===== CONTEST CARD LEFT ===== */
+  .contest-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    min-width: 120px;
+  }
+  
+  .platform-badge {
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.3rem 0.7rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+  
+  .platform-badge.CODEFORCES { background-color: #1a3a5c; color: #4a9eff; }
+  .platform-badge.LEETCODE   { background-color: #2d2000; color: #ffa500; }
+  .platform-badge.CODECHEF   { background-color: #1a2d1a; color: #5cb85c; }
+  .platform-badge.ATCODER    { background-color: #2a1a2a; color: #cc88ff; }
+  .platform-badge.HACKERRANK { background-color: #1a2d1a; color: #00ea64; }
+  
+  .division-badge {
+    font-family: var(--font-code);
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  /* ===== CONTEST CARD MID ===== */
+  .contest-card-mid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .contest-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .contest-time {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-code);
+  }
+  
+  .contest-duration {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+  
+  /* ===== CONTEST CARD RIGHT ===== */
+  .contest-card-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+    min-width: 120px;
+  }
+  
+  .phase-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .phase-badge.BEFORE {
+    background-color: rgba(252, 184, 2, 0.1);
+    border: 1px solid rgba(252, 184, 2, 0.3);
+    color: var(--yellow-primary);
+  }
+  
+  .phase-badge.RUNNING {
+    background-color: rgba(40, 200, 64, 0.1);
+    border: 1px solid rgba(40, 200, 64, 0.3);
+    color: #28c840;
+  }
+  
+  /* ===== RETRY BUTTON ===== */
+  #retry-btn {
+    margin-top: 0.5rem;
+  }

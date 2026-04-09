@@ -223,3 +223,71 @@ footer {
   color: var(--text-secondary);
   font-size: 0.85rem;
 }
+/* ===== LOADER OVERLAY ===== */
+#loader-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#loader-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ===== LOADER ANIMATION ===== */
+.loader-bell {
+  font-size: 3rem;
+  animation: bellRing 0.8s ease-in-out infinite alternate;
+  transform-origin: top center;
+}
+
+.loader-brackets {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-code);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--yellow-primary);
+  margin-top: 0.5rem;
+}
+
+.loader-brackets span {
+  animation: fadeInOut 1s ease-in-out infinite alternate;
+}
+
+.loader-brackets span:nth-child(1) { animation-delay: 0s; }
+.loader-brackets span:nth-child(2) { animation-delay: 0.3s; }
+.loader-brackets span:nth-child(3) { animation-delay: 0.6s; }
+
+.loader-text {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  letter-spacing: 0.15em;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* ===== KEYFRAMES ===== */
+@keyframes bellRing {
+  0%   { transform: rotate(-15deg); }
+  100% { transform: rotate(15deg); }
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0.2; color: var(--text-secondary); }
+  100% { opacity: 1;   color: var(--yellow-primary); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 1;   }
+}
