@@ -1,0 +1,202 @@
+/* ===== SUBSCRIPTION SECTION ===== */
+#subscriptions {
+    padding: 4rem 6%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ===== PLATFORMS GRID ===== */
+  .platforms-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* ===== PLATFORM CARD ===== */
+  .platform-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    flex: 1 1 280px;
+    max-width: 340px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .platform-card.active {
+    border-color: var(--yellow-primary);
+    box-shadow: var(--glow);
+  }
+  
+  /* ===== PLATFORM CARD HEADER ===== */
+  .platform-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .platform-card-header img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+  
+  .platform-card-header h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    flex: 1;
+  }
+  
+  /* ===== TOGGLE SWITCH ===== */
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  
+  .toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+  
+  .toggle-slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--border);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-slider::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    left: 4px;
+    top: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle input:checked + .toggle-slider {
+    background-color: var(--yellow-primary);
+  }
+  
+  .toggle input:checked + .toggle-slider::before {
+    transform: translateX(20px);
+  }
+  
+  /* ===== DIVISIONS ===== */
+  .divisions {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .divisions-hint {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+  
+  .divisions label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .divisions label:hover {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+  
+  .divisions input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    position: relative;
+  }
+  
+  .divisions input[type="checkbox"]:checked {
+    background-color: var(--yellow-primary);
+    border-color: var(--yellow-primary);
+  }
+  
+  .divisions input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: #000000;
+    font-size: 11px;
+    font-weight: 700;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* ===== SAVE ROW ===== */
+  .save-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+  }
+  
+  .save-row .btn-primary {
+    min-width: 200px;
+  }
+  
+  #save-success {
+    background-color: rgba(40, 200, 64, 0.1);
+    border: 1px solid rgba(40, 200, 64, 0.3);
+    color: #28c840;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+  
+  #save-error {
+    background-color: rgba(255, 95, 87, 0.1);
+    border: 1px solid rgba(255, 95, 87, 0.3);
+    color: #ff5f57;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+  }
+  
+  /* ===== FADE IN ANIMATION ===== */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
