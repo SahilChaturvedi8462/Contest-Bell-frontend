@@ -59,15 +59,15 @@
 
         <div class="divisions" id="divisions-CODEFORCES" hidden>
           <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
-          <label><input type="checkbox" value="DIV_1" data-platform="CODEFORCES" /> Div. 1</label>
-          <label><input type="checkbox" value="DIV_2" data-platform="CODEFORCES" /> Div. 2</label>
-          <label><input type="checkbox" value="DIV_1_2" data-platform="CODEFORCES" /> Div. 1 + 2</label>
-          <label><input type="checkbox" value="DIV_3" data-platform="CODEFORCES" /> Div. 3</label>
-          <label><input type="checkbox" value="DIV_4" data-platform="CODEFORCES" /> Div. 4</label>
-          <label><input type="checkbox" value="EDUCATIONAL" data-platform="CODEFORCES" /> Educational</label>
-          <label><input type="checkbox" value="GLOBAL" data-platform="CODEFORCES" /> Global</label>
+          <label><input type="checkbox" value="DIV_1" data-platform="CODEFORCES" disabled /> Div. 1</label>
+          <label><input type="checkbox" value="DIV_2" data-platform="CODEFORCES" disabled/> Div. 2</label>
+          <label><input type="checkbox" value="DIV_1_2" data-platform="CODEFORCES" disabled/> Div. 1 + 2</label>
+          <label><input type="checkbox" value="DIV_3" data-platform="CODEFORCES" disabled/> Div. 3</label>
+          <label><input type="checkbox" value="DIV_4" data-platform="CODEFORCES" disabled/> Div. 4</label>
+          <label><input type="checkbox" value="EDUCATIONAL" data-platform="CODEFORCES" disabled/> Educational</label>
+          <label><input type="checkbox" value="GLOBAL" data-platform="CODEFORCES" disabled/> Global</label>
           <label>
-            <input type="checkbox" value="OTHER" data-platform="CODEFORCES" />
+            <input type="checkbox" value="OTHER" data-platform="CODEFORCES" disabled/>
             Other Contests
           </label>
         </div>
@@ -86,10 +86,10 @@
 
         <div class="divisions" id="divisions-LEETCODE" hidden>
           <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
-          <label><input type="checkbox" value="WEEKLY" data-platform="LEETCODE" /> Weekly Contest</label>
-          <label><input type="checkbox" value="BIWEEKLY" data-platform="LEETCODE" /> Biweekly Contest</label>
+          <label><input type="checkbox" value="WEEKLY" data-platform="LEETCODE" disabled/> Weekly Contest</label>
+          <label><input type="checkbox" value="BIWEEKLY" data-platform="LEETCODE" disabled/> Biweekly Contest</label>
           <label>
-            <input type="checkbox" value="OTHER" data-platform="LEETCODE" />
+            <input type="checkbox" value="OTHER" data-platform="LEETCODE" disabled/>
             Other Contests
           </label>
         </div>
@@ -108,12 +108,12 @@
 
         <div class="divisions" id="divisions-CODECHEF" hidden>
           <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
-          <label><input type="checkbox" value="STARTERS" data-platform="CODECHEF" /> Starters</label>
-          <label><input type="checkbox" value="COOK_OFF" data-platform="CODECHEF" /> Cook-Off</label>
-          <label><input type="checkbox" value="LUNCHTIME" data-platform="CODECHEF" /> Lunchtime</label>
-          <label><input type="checkbox" value="LONG_CHALLENGE" data-platform="CODECHEF" /> Long Challenge</label>
+          <label><input type="checkbox" value="STARTERS" data-platform="CODECHEF" disabled/> Starters</label>
+          <label><input type="checkbox" value="COOK_OFF" data-platform="CODECHEF" disabled/> Cook-Off</label>
+          <label><input type="checkbox" value="LUNCHTIME" data-platform="CODECHEF" disabled/> Lunchtime</label>
+          <label><input type="checkbox" value="LONG_CHALLENGE" data-platform="CODECHEF" disabled/> Long Challenge</label>
           <label>
-            <input type="checkbox" value="OTHER" data-platform="CODECHEF" />
+            <input type="checkbox" value="OTHER" data-platform="CODECHEF" disabled/>
             Other Contests
           </label>
         </div>
@@ -132,12 +132,12 @@
 
         <div class="divisions" id="divisions-ATCODER" hidden>
           <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
-          <label><input type="checkbox" value="BEGINNER" data-platform="ATCODER" /> ABC — Beginner</label>
-          <label><input type="checkbox" value="REGULAR" data-platform="ATCODER" /> ARC — Regular</label>
-          <label><input type="checkbox" value="GRAND" data-platform="ATCODER" /> AGC — Grand</label>
-          <label><input type="checkbox" value="HEURISTIC" data-platform="ATCODER" /> AHC — Heuristic</label>
+          <label><input type="checkbox" value="BEGINNER" data-platform="ATCODER" disabled/> ABC — Beginner</label>
+          <label><input type="checkbox" value="REGULAR" data-platform="ATCODER" disabled/> ARC — Regular</label>
+          <label><input type="checkbox" value="GRAND" data-platform="ATCODER" disabled/> AGC — Grand</label>
+          <label><input type="checkbox" value="HEURISTIC" data-platform="ATCODER" disabled/> AHC — Heuristic</label>
           <label>
-            <input type="checkbox" value="OTHER" data-platform="ATCODER" />
+            <input type="checkbox" value="OTHER" data-platform="ATCODER" disabled/>
             Other Contests
           </label>
         </div>
@@ -156,7 +156,7 @@
 
         <div class="divisions" id="divisions-HACKERRANK" hidden>
           <p class="divisions-hint">Select divisions (leave all unchecked to get notified for everything)</p>
-          <label><input type="checkbox" value="OTHER" data-platform="HACKERRANK" /> Every new one</label>
+          <label><input type="checkbox" value="OTHER" data-platform="HACKERRANK" disabled/> Every new one</label>
         </div>
       </div>
 
@@ -178,7 +178,8 @@
       <p>Made with ❤️ for the CP community.</p>
     </div>
   </footer>
-
+  <script src="js/config.js"></script>
+  <script src="js/subscription.js"></script>
 </body>
 
 </html>
