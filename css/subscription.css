@@ -200,3 +200,23 @@
       transform: translateY(0);
     }
   }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  #subscriptions {
+    padding: 2rem 4%;
+  }
+
+  .platform-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .save-row {
+    padding: 1rem 0;
+  }
+
+  .save-row .btn-primary {
+    width: 100%;
+  }
+}
