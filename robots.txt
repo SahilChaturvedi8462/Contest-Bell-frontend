@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /profile.html
+Disallow: /subscription.html
+
+Sitemap: https://contestbell.netlify.app/sitemap.xml
