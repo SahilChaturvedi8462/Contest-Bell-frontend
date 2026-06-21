@@ -338,6 +338,29 @@
       document.getElementById('loader-overlay').classList.add('hide');
     });
   </script>
+  <script src="js/config.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loader-overlay').classList.add('hide');
+    });
+  
+    // ===== CHECK IF LOGGED IN =====
+    if (getToken() && !isTokenExpired()) {
+      // User is logged in — swap navbar buttons
+      document.querySelector('.nav-auth').innerHTML = `
+        <a href="dashboard.html" class="btn-secondary">Dashboard</a>
+        <a href="subscription.html" class="btn-secondary">Subscriptions</a>
+        <a href="profile.html" class="btn-secondary">Profile</a>
+        <a href="#" onclick="logout()" class="btn-primary">Log Out</a>
+      `;
+  
+      // Also swap hero CTA buttons
+      document.querySelector('.hero-actions').innerHTML = `
+        <a href="dashboard.html" class="btn-primary">Go to Dashboard →</a>
+        <a href="subscription.html" class="btn-secondary">Manage Subscriptions</a>
+      `;
+    }
+  </script>
 
 </body>
 
