@@ -319,12 +319,20 @@
           <ul>
             <li><a href="https://github.com/SahilChaturvedi8462" target="_blank">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/sahil-chaturvedi-901915328/" target="_blank">LinkedIn</a></li>
-            <li><a href="hhttps://www.instagram.com/build_with_sahil846?igsh=bmxsZ2V3b2luOTRx"
+            <li><a href="https://www.instagram.com/build_with_sahil846?igsh=bmxsZ2V3b2luOTRx"
                 target="_blank">Instagram</a></li>
             <li><a href="mailto:dumbcode6@gmail.com">Mail me your feedback</a></li>
           </ul>
         </div>
       </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+      </ul>
     </div>
 
     <div class="footer-bottom">
@@ -343,7 +351,7 @@
     window.addEventListener('load', () => {
       document.getElementById('loader-overlay').classList.add('hide');
     });
-  
+
     // ===== CHECK IF LOGGED IN =====
     if (getToken() && !isTokenExpired()) {
       // User is logged in — swap navbar buttons
@@ -353,7 +361,7 @@
         <a href="profile.html" class="btn-secondary">Profile</a>
         <a href="#" onclick="logout()" class="btn-primary">Log Out</a>
       `;
-  
+
       // Also swap hero CTA buttons
       document.querySelector('.hero-actions').innerHTML = `
         <a href="dashboard.html" class="btn-primary">Go to Dashboard →</a>
