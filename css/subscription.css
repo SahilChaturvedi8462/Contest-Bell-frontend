@@ -1,6 +1,6 @@
 /* ===== SUBSCRIPTION SECTION ===== */
 #subscriptions {
-    padding: 4rem 6%;
+    padding: 4rem 6% 7rem;
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -160,16 +160,30 @@
   
   /* ===== SAVE ROW ===== */
   .save-row {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding: 2rem 0;
+    justify-content: center;
+  
+    padding: 0.6rem;
+  
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+  
+    box-shadow: var(--glow);
+  
+    z-index: 1000;
   }
   
   .save-row .btn-primary {
-    min-width: 200px;
+    min-width: 220px;
   }
+
   
   #save-success {
     background-color: rgba(40, 200, 64, 0.1);
@@ -204,7 +218,7 @@
 @media (max-width: 768px) {
 
   #subscriptions {
-    padding: 2rem 4%;
+    padding: 2rem 4% 7rem;
   }
 
   .platform-card {
@@ -213,10 +227,11 @@
   }
 
   .save-row {
-    padding: 1rem 0;
+    bottom: 1rem;
   }
-
+  
   .save-row .btn-primary {
-    width: 100%;
+    width: auto;
+    min-width: 200px;
   }
 }

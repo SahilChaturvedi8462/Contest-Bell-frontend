@@ -21,6 +21,8 @@ window.addEventListener('load', () => {
   // Stores current subscriptions from backend
   // { CODEFORCES: { active: true, divisions: ['DIV_1', 'DIV_2'] }, ... }
   let currentSubscriptions = {};
+  // Tracks whether user has made changes that are not saved yet
+  let hasUnsavedChanges = false;
   
   // ===== HELPERS =====
   function getToken() { return localStorage.getItem('token'); }
@@ -93,6 +95,9 @@ window.addEventListener('load', () => {
   // ===== TOGGLE HANDLERS =====
   document.querySelectorAll('.toggle input[type="checkbox"]').forEach(toggle => {
     toggle.addEventListener('change', () => {
+
+      hasUnsavedChanges = true;
+
       const platform = toggle.dataset.platform;
       const divsDiv  = document.getElementById(`divisions-${platform}`);
       const card     = document.getElementById(`card-${platform}`);
@@ -110,6 +115,15 @@ window.addEventListener('load', () => {
       }
     });
   });
+
+  // ===== TRACK DIVISION CHANGES =====
+
+document.querySelectorAll('.divisions input[type="checkbox"]').forEach(checkbox => {
+  checkbox.addEventListener('change', () => {
+      hasUnsavedChanges = true;
+  });
+});
+
   
   // ===== GET SELECTED DIVISIONS =====
   function getSelectedDivisions(platform) {
@@ -173,8 +187,14 @@ window.addEventListener('load', () => {
       // Reload subscriptions to sync state
       currentSubscriptions = {};
       await loadSubscriptions();
+
+      hasUnsavedChanges = false;
   
       document.getElementById('save-success').hidden = false;
+
+      setTimeout(() => {
+        document.getElementById('save-success').hidden = true;
+    }, 2000);
   
     } catch (error) {
       document.getElementById('save-error').hidden = false;
@@ -183,6 +203,19 @@ window.addEventListener('load', () => {
     saveBtn.textContent = 'Save Subscriptions';
     saveBtn.disabled    = false;
   });
+
+  // ===== UNSAVED CHANGES WARNING =====
+
+window.addEventListener('beforeunload', (event) => {
+
+  if (!hasUnsavedChanges) {
+      return;
+  }
+
+  event.preventDefault();
+  event.returnValue = '';
+
+});
   
   // ===== INIT =====
   loadSubscriptions();
