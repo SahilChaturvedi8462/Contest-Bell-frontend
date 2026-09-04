@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/auth.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" />
 </head>
 
 <body>
@@ -156,6 +158,67 @@
                 <p id="update-error" hidden>❌ Something went wrong. Please try again.</p>
 
             </form>
+
+        </div>
+    </section>
+
+    <!-- Google Calendar -->
+    <section class="profile-section">
+        <div class="auth-card calendar-settings-card">
+
+            <div class="calendar-settings-header">
+
+                <div>
+                    <div class="calendar-title">
+                        <img
+                            src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                            alt="Google"
+                            class="google-icon"
+                        >
+            
+                        <h2>Google Calendar</h2>
+                    </div>
+            
+                    <p>
+                        Automatically add upcoming contests to your Google Calendar.
+                    </p>
+                </div>
+            
+                <span class="material-symbols-outlined calendar-settings-icon">
+                    calendar_month
+                </span>
+            
+            </div>
+
+            <div class="calendar-connection-status" id="calendar-connection-status">
+                <span class="material-symbols-outlined" id="calendar-status-icon">
+                    cloud_off
+                </span>
+
+                <div>
+                    <strong id="calendar-status-title">
+                        Not Connected
+                    </strong>
+
+                    <p id="calendar-status-text">
+                        Connect your Google Calendar to automatically add contests.
+                    </p>
+                </div>
+            </div>
+
+            <button type="button" class="btn-primary" id="calendar-action-btn">
+                <span class="material-symbols-outlined" id="calendar-action-icon">
+                    event_available
+                </span>
+
+                <span id="calendar-action-text">
+                    Connect Google Calendar
+                </span>
+            </button>
+
+            <p class="calendar-settings-note">
+                You can disconnect your Google Calendar anytime.
+            </p>
 
         </div>
     </section>

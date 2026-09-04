@@ -183,6 +183,14 @@
   margin-bottom: 1.5rem;
 }
 
+.profile-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 6%;
+  margin-top: 20px;
+}
+
 .info-group {
   display: flex;
   justify-content: space-between;
@@ -212,6 +220,92 @@ hr {
   margin: 1.5rem 0;
 }
 
+/* ===== GOOGLE CALENDAR ===== */
+
+.calendar-settings-card {
+  width: 100%;
+  max-width: 480px;
+}
+
+.calendar-settings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.calendar-title h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.google-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.calendar-settings-header p {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.calendar-settings-icon {
+  color: var(--yellow-primary);
+  font-size: 30px;
+}
+
+.calendar-connection-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.calendar-connection-status>span {
+  color: var(--text-secondary);
+  font-size: 28px;
+}
+
+.calendar-connection-status strong {
+  color: var(--text-primary);
+}
+
+.calendar-connection-status p {
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.calendar-connection-status.connected {
+  border-color: var(--yellow-primary);
+}
+
+.calendar-connection-status.connected>span {
+  color: var(--yellow-primary);
+}
+
+.calendar-settings-card .btn-primary {
+  width: 100%;
+}
+
+.calendar-settings-note {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
@@ -238,4 +332,48 @@ hr {
     align-items: flex-start;
     gap: 0.25rem;
   }
+
+  .profile-section {
+    padding: 0 4%;
+  }
+
+  .calendar-settings-card {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
+/* GOOGLE CALENDAR */
+
+.calendar-settings-card {
+  width: 100%;
+  max-width: 480px;
+}
+
+.calendar-settings-header {
+  gap: 0.75rem;
+}
+
+.calendar-title h2 {
+  font-size: 1.25rem;
+}
+
+.calendar-settings-header p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.calendar-connection-status {
+  padding: 0.85rem;
+}
+
+.calendar-connection-status p {
+  font-size: 0.8rem;
+}
+
+#calendar-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
