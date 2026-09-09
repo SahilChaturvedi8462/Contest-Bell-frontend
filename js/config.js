@@ -1,5 +1,6 @@
 const BASE_URL = "https://contest-bell.onrender.com";
-
+// js/config.js
+// const BASE_URL = "http://localhost:8080";
 // ===== AUTH HELPERS =====
 function getToken() {
   return localStorage.getItem('token');

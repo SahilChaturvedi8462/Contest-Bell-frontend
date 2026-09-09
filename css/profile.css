@@ -1,0 +1,277 @@
+/* =========================
+   GOOGLE CALENDAR
+   ========================= */
+
+.calendar-settings-card {
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Header */
+
+.calendar-settings-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.calendar-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar-title h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.google-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.calendar-settings-header>.calendar-settings-icon {
+    font-size: 28px;
+    color: var(--yellow-primary);
+}
+
+/* Description */
+
+.calendar-settings-header p {
+    margin: 8px 0 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Connection status */
+
+.calendar-connection-status {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 16px;
+    margin-bottom: 20px;
+
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.calendar-connection-status>span {
+    flex-shrink: 0;
+    font-size: 30px;
+    color: var(--text-secondary);
+}
+
+.calendar-connection-status strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+.calendar-connection-status p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Connected */
+
+.calendar-connection-status.connected {
+    border-color: rgba(52, 168, 83, 0.4);
+}
+
+.calendar-connection-status.connected>span {
+    color: #34A853;
+}
+
+/* Button */
+
+.calendar-settings-card .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-width: 230px;
+}
+
+.calendar-settings-card .btn-primary .material-symbols-outlined {
+    font-size: 20px;
+}
+
+/* Note */
+
+.calendar-settings-note {
+    margin: 12px 0 0;
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+.profile-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 6%;
+    margin-top: 20px;
+}
+
+/* Fix unwanted vertical gap between profile sections */
+#profile {
+    min-height: auto;
+    padding-bottom: 0;
+}
+
+.profile-section {
+    margin-top: 20px;
+}
+
+#profile {
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding-top: 10 !important;
+    padding-bottom: 0 !important;
+}
+
+.profile-section {
+    height: auto !important;
+    min-height: 0 !important;
+    margin-top: 20px !important;
+}
+
+.calendar-disconnect {
+    width: 100%;
+    border-color: #EF4444;
+    color: #EF4444;
+    background-color: transparent;
+}
+
+.calendar-disconnect:hover {
+    background-color: rgba(239, 68, 68, 0.1);
+    border-color: #EF4444;
+    color: #EF4444;
+    transform: translateY(-2px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    /* Profile main card */
+    #profile {
+        padding: 1.5rem 4% !important;
+        min-height: auto !important;
+        align-items: flex-start !important;
+    }
+
+    .auth-card {
+        padding: 1.75rem !important;
+        max-width: 100%;
+    }
+
+    /* Google Calendar section */
+    .profile-section {
+        padding: 0 4%;
+        margin-top: 20px !important;
+    }
+
+    .calendar-settings-card {
+        max-width: 100%;
+        padding: 1.75rem !important;
+    }
+
+    /* Calendar header */
+    .calendar-settings-header {
+        gap: 1rem;
+    }
+
+    .calendar-title {
+        gap: 0.6rem;
+    }
+
+    .calendar-title h2 {
+        font-size: 1.25rem;
+    }
+
+    .calendar-settings-header p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .google-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .calendar-settings-header > .calendar-settings-icon {
+        font-size: 28px;
+    }
+
+    /* Connection status */
+    .calendar-connection-status {
+        padding: 0.9rem;
+        gap: 0.75rem;
+    }
+
+    .calendar-connection-status > span {
+        font-size: 24px;
+    }
+
+    .calendar-connection-status strong {
+        font-size: 0.9rem;
+    }
+
+    .calendar-connection-status p {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    /* Calendar button */
+    .calendar-settings-card .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Note */
+    .calendar-settings-note {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+}
+@media (max-width: 480px) {
+
+    #profile {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .profile-section {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .auth-card,
+    .calendar-settings-card {
+        padding: 1.25rem !important;
+    }
+
+    .calendar-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .calendar-settings-header > .calendar-settings-icon {
+        display: none;
+    }
+}
